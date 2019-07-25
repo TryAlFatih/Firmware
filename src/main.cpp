@@ -1,6 +1,7 @@
 #include <Arduino.h>
 
 float bacaADC(int pin);
+void tampilLcd(int x, int y, char* fmtstr);
 
 void setup() {
   pinMode(LED_BUILTIN, OUTPUT);
@@ -18,8 +19,6 @@ void loop() {
   delay(2000);
 }
 
-
-
 /**
  * @brief baca fungsi ADC
  * 
@@ -31,4 +30,17 @@ float bacaADC(int pin){
   
   data = 4/10*100;
   return data;
+}
+
+/**
+ * @brief Fungsi mengakses lcd 16x2 dari string yang dipilih
+ * 
+ * @param x Baris yang dipilih untuk menampilkan string 
+ * @param y Kolom yang dipilih untuk menampilkan string 
+ * @param fmtstr String yang akan ditampilkan
+ */
+
+void tampilLcd(int x, int y, char* fmtstr)
+{
+
 }

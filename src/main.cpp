@@ -1,5 +1,6 @@
 #include <Arduino.h>
 
+float bacaADC(int pin);
 void tampilLcd(int x, int y, char* fmtstr);
 
 void setup() {
@@ -16,6 +17,19 @@ void loop() {
   digitalWrite(LED_BUILTIN, LOW);
   digitalWrite(12, LOW);
   delay(2000);
+}
+
+/**
+ * @brief baca fungsi ADC
+ * 
+ * @param pin input
+ * @return float data hasi konversi
+ */
+float bacaADC(int pin){
+  float data = analogRead(pin);
+  
+  data = 4/10*100;
+  return data;
 }
 
 /**

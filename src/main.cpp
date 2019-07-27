@@ -1,7 +1,7 @@
 
 #include <Arduino.h>
 
-#define Buzzer_pin 7
+#define BUZZER_PIN 7
 #define ECHO 2
 #define TTRIG 3
 int sensor_depan;
@@ -15,7 +15,7 @@ void setup() {
   pinMode(LED_BUILTIN, OUTPUT);
   pinMode(12, OUTPUT);
   pinMode(2, INPUT);
-  pinMode(Buzzer_pin, OUTPUT);
+  pinMode(BUZZER_PIN, OUTPUT);
 }
 
 void loop()
@@ -28,15 +28,15 @@ void loop()
   digitalWrite(12, LOW);
   delay(2000);
 
-  if (Sensor_depan < 20)
+  if (sensor_depan < 20)
   {
-    digitalWrite(Buzzer_pin, HIGH);
+    digitalWrite(BUZZER_PIN, HIGH);
     delay(100);
-    digitalWrite(Buzzer_pin, LOW);
+    digitalWrite(BUZZER_PIN, LOW);
     delay(100);
   }
   else
-    digitalWrite(Buzzer_pin, LOW);
+    digitalWrite(BUZZER_PIN, LOW);
 }
 
 /**

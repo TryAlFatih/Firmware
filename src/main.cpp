@@ -1,11 +1,15 @@
+
 #include <Arduino.h>
 
 #define Buzzer_pin 7
-
-int Sensor_depan;
+#define ECHO 2
+#define TTRIG 3
+int sensor_depan;
+int srf_1;
 
 float bacaADC(int pin);
 void tampilLcd(int x, int y, char* fmtstr);
+void maju(int x, int y ,int arah );
 
 void setup() {
   pinMode(LED_BUILTIN, OUTPUT);
@@ -58,5 +62,18 @@ float bacaADC(int pin){
 
 void tampilLcd(int x, int y, char* fmtstr)
 {
+
+}
+
+/**
+ * @brief Fungsi mengarahkan robot ke depan
+ * 
+ * @param x koordinat 1 
+ * @param y koordinat 2
+ * @param arah menentukan kemiringan sudut maju
+ */
+void maju(int x, int y, int arah)
+{
+
 
 }
